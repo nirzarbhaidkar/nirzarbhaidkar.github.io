@@ -1,73 +1,93 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Roboto, sans-serif;
+/* Reset default margin and padding */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
 }
 
-h1 {
-  font-size: 24px;
-  font-weight: 500;
-  margin-top: 0;
-}
-
-h2 {
-  font-size: 18px;
-  font-weight: 500;
-  margin-top: 20px;
-}
-
-p {
-  font-size: 16px;
-  line-height: 1.5;
-  margin-bottom: 10px;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  margin-bottom: 10px;
-}
-
-a {
-  color: #000;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
+/* Add general styling */
 .container {
-  max-width: 960px;
-  margin: 0 auto;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
+/* Header */
 .header {
-  background-color: #fff;
-  padding: 20px;
+    background-color: #222;
+    color: #fff;
+    padding: 10px 0;
 }
 
-.main {
-  padding: 20px;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+}
+
+.nav-item {
+    margin-right: 20px;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.nav-item a:hover {
+    color: #f48f5c;
+}
+
+/* Hero section */
+.hero {
+    background-image: url('hero-background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-size: 18px;
+}
+
+/* Service sections */
+.service {
+    padding: 80px 0;
+}
+
+.service-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.service-description {
+    font-size: 18px;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Footer */
 .footer {
-  background-color: #f0f0f0;
-  padding: 20px;
-  text-align: center;
-}
-
-.material-icons {
-  font-size: 24px;
-  margin-right: 10px;
-}
-
-@media (max-width: 768px) {
-  .container {
-    max-width: 100%;
-  }
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
 }

@@ -1,65 +1,58 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/theme@13.0.0/dist/mdc.theme.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/button@9.0.0/dist/mdc.button.min.css">
     <link rel="stylesheet" href="styles.css">
     <title>Nirzar Marketing Agency</title>
 </head>
 <body>
-    <header class="mdc-top-app-bar mdc-top-app-bar--fixed">
-        <div class="mdc-top-app-bar__row">
-            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-                <span class="mdc-top-app-bar__title">Nirzar Marketing Agency</span>
-            </section>
-        </div>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">Nirzar</div>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#seo">SEO</a></li>
+                    <li class="nav-item"><a href="#paid-ads">Paid Ads</a></li>
+                    <li class="nav-item"><a href="#social-media">Social Media</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
-    
-    <main class="mdc-top-app-bar--fixed-adjust">
-        <div class="main-content">
-            <section class="mdc-layout-grid">
-                <div class="mdc-layout-grid__inner">
-                    <div class="mdc-layout-grid__cell--span-4">
-                        <div class="mdc-card">
-                            <img src="seo-image.jpg" alt="SEO Services">
-                            <div class="mdc-card__primary-action">
-                                <div class="mdc-card__media-content">
-                                    <h2 class="mdc-typography--headline6">SEO Services</h2>
-                                    <p class="mdc-typography--body2">Improve your website's visibility with our expert SEO strategies.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mdc-layout-grid__cell--span-4">
-                        <div class="mdc-card">
-                            <img src="paid-ads-image.jpg" alt="Paid Ads">
-                            <div class="mdc-card__primary-action">
-                                <div class="mdc-card__media-content">
-                                    <h2 class="mdc-typography--headline6">Paid Ads</h2>
-                                    <p class="mdc-typography--body2">Maximize your reach and conversions through targeted paid advertising.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mdc-layout-grid__cell--span-4">
-                        <div class="mdc-card">
-                            <img src="social-media-image.jpg" alt="Social Media">
-                            <div class="mdc-card__primary-action">
-                                <div class="mdc-card__media-content">
-                                    <h2 class="mdc-typography--headline6">Social Media</h2>
-                                    <p class="mdc-typography--body2">Engage and connect with your audience on various social platforms.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/@material/top-app-bar@13.0.0/dist/mdc.top-app-bar.min.js"></script>
+    <section id="hero" class="hero">
+        <div class="container">
+            <h1 class="hero-title">Nirzar Marketing Agency</h1>
+            <p class="hero-subtitle">Boost your online presence with our services</p>
+        </div>
+    </section>
+
+    <section id="seo" class="service">
+        <div class="container">
+            <h2 class="service-title">SEO Services</h2>
+            <p class="service-description">Improve your website's visibility and organic traffic through our effective SEO strategies.</p>
+        </div>
+    </section>
+
+    <section id="paid-ads" class="service">
+        <div class="container">
+            <h2 class="service-title">Paid Advertising</h2>
+            <p class="service-description">Reach your target audience and maximize conversions with our targeted paid advertising campaigns.</p>
+        </div>
+    </section>
+
+    <section id="social-media" class="service">
+        <div class="container">
+            <h2 class="service-title">Social Media Management</h2>
+            <p class="service-description">Engage, connect, and build a strong online presence with our expert social media management services.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 Nirzar Marketing Agency. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>

@@ -1,1 +1,1 @@
-https://nirzarbhaidkar.github.io
+nirzarbhaidkar.github.io

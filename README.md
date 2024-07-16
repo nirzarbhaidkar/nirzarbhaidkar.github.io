@@ -1,1 +1,1 @@
-# nirzarbhaidkar.github.io
+# nirzar.github.io

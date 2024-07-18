@@ -1,58 +1,80 @@
+import React from 'react';
+import { Briefcase, GraduationCap, Award } from 'lucide-react';
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Nirzar Marketing Agency</title>
-</head>
-<body>
-    <header class="header">
-        <nav class="navbar">
-            <div class="container">
-                <div class="logo">Nirzar</div>
-                <ul class="nav-menu">
-                    <li class="nav-item"><a href="#seo">SEO</a></li>
-                    <li class="nav-item"><a href="#paid-ads">Paid Ads</a></li>
-                    <li class="nav-item"><a href="#social-media">Social Media</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+const GoogleStylePortfolio = () => {
+  return (
+    <div className="flex flex-col items-center min-h-screen bg-white p-8">
+      <header className="w-full max-w-2xl">
+        <h1 className="text-4xl font-bold mb-2 text-blue-500">Nirzar Bhaidkar</h1>
+        <p className="text-xl text-gray-700">Marketing Analyst</p>
+      </header>
 
-    <section id="hero" class="hero">
-        <div class="container">
-            <h1 class="hero-title">Nirzar Marketing Agency</h1>
-            <p class="hero-subtitle">Boost your online presence with our services</p>
-        </div>
-    </section>
+      <main className="w-full max-w-2xl mt-8">
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold mb-4 text-gray-800">Professional Summary</h2>
+          <p className="text-gray-600">
+            Dynamic and results-driven Marketing Analyst with over two years of experience in product marketing and campaign optimization. Proven expertise in executing go-to-market strategies, developing customer retention programs, and leveraging data-driven insights to enhance marketing performance.
+          </p>
+        </section>
 
-    <section id="seo" class="service">
-        <div class="container">
-            <h2 class="service-title">SEO Services</h2>
-            <p class="service-description">Improve your website's visibility and organic traffic through our effective SEO strategies.</p>
-        </div>
-    </section>
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold mb-4 text-gray-800 flex items-center">
+            <Briefcase className="mr-2" /> Experience
+          </h2>
+          <div className="mb-4">
+            <h3 className="text-xl font-medium text-gray-800">Search Executive</h3>
+            <p className="text-gray-600">GroupM, Mumbai | May 2023 - present</p>
+            <ul className="list-disc list-inside text-gray-600 mt-2">
+              <li>Spearheaded end-to-end campaign ideation, execution, and optimization</li>
+              <li>Managed and optimized bids to maximize ROI in paid search campaigns</li>
+              <li>Led A/B testing and continuous experimentation to refine marketing strategies</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-xl font-medium text-gray-800">Analyst</h3>
+            <p className="text-gray-600">Publicis Groupe, Mumbai | Oct 2021 - Jul 2022</p>
+            <ul className="list-disc list-inside text-gray-600 mt-2">
+              <li>Developed and optimized PPC campaigns for customer retention and acquisition</li>
+              <li>Conducted Search Query Reporting (SQR) to improve ad performance</li>
+              <li>Managed bid strategies to enhance paid search effectiveness</li>
+            </ul>
+          </div>
+        </section>
 
-    <section id="paid-ads" class="service">
-        <div class="container">
-            <h2 class="service-title">Paid Advertising</h2>
-            <p class="service-description">Reach your target audience and maximize conversions with our targeted paid advertising campaigns.</p>
-        </div>
-    </section>
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold mb-4 text-gray-800 flex items-center">
+            <GraduationCap className="mr-2" /> Education
+          </h2>
+          <div className="mb-2">
+            <h3 className="text-xl font-medium text-gray-800">Master of Management Studies</h3>
+            <p className="text-gray-600">University of Mumbai | Pursuing</p>
+          </div>
+          <div>
+            <h3 className="text-xl font-medium text-gray-800">Bachelor of Engineering</h3>
+            <p className="text-gray-600">University of Mumbai | Graduated in 2020</p>
+          </div>
+        </section>
 
-    <section id="social-media" class="service">
-        <div class="container">
-            <h2 class="service-title">Social Media Management</h2>
-            <p class="service-description">Engage, connect, and build a strong online presence with our expert social media management services.</p>
-        </div>
-    </section>
+        <section>
+          <h2 className="text-2xl font-semibold mb-4 text-gray-800 flex items-center">
+            <Award className="mr-2" /> Certifications
+          </h2>
+          <ul className="list-disc list-inside text-gray-600">
+            <li>Meta Certified Digital Marketing Associate</li>
+            <li>Google Digital Marketing & E-commerce Career Certificate</li>
+            <li>Google Ads Search Professional Certification</li>
+            <li>Meta Certified Media Buying Professional</li>
+            <li>Meta Certified Media Planning Professional</li>
+          </ul>
+        </section>
+      </main>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2023 Nirzar Marketing Agency. All rights reserved.</p>
-        </div>
-    </footer>
-</body>
-</html>
+      <footer className="w-full max-w-2xl mt-8 text-center text-gray-500">
+        <p>n.bhaidkar@gmail.com | 7709595965 | Mumbai, India</p>
+        <p>www.linkedin.com/in/nirzarbhaidkar/ | www.nirzar.in</p>
+      </footer>
+    </div>
+  );
+};
+
+export default GoogleStylePortfolio;

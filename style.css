@@ -91,3 +91,33 @@ body, h1, h2, p {
     text-align: center;
     padding: 20px 0;
 }
+
+/* Future Improvements section */
+#future-improvements {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#future-improvements h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+#future-improvements p {
+    font-size: 18px;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+
+#future-improvements ul {
+    list-style: none;
+    padding: 0;
+}
+
+#future-improvements li {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}

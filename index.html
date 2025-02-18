@@ -1,90 +1,56 @@
-import React from 'react';
-import { Briefcase, GraduationCap, Award } from 'lucide-react';
-
-const GoogleStylePortfolio = () => {
-  return (
-    <div className="flex flex-col items-center min-h-screen bg-white p-8">
-      <header className="w-full max-w-2xl">
-        <h1 className="text-4xl font-bold mb-2 text-blue-500">Nirzar Bhaidkar</h1>
-        <p className="text-xl text-gray-700">Marketing Analyst</p>
-      </header>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11072161008"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-11072161008');
-</script>
-
-      <main className="w-full max-w-2xl mt-8">
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4 text-gray-800">Professional Summary</h2>
-          <p className="text-gray-600">
-            Dynamic and results-driven Marketing Analyst with over two years of experience in product marketing and campaign optimization. Proven expertise in executing go-to-market strategies, developing customer retention programs, and leveraging data-driven insights to enhance marketing performance.
-          </p>
-        </section>
-
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4 text-gray-800 flex items-center">
-            <Briefcase className="mr-2" /> Experience
-          </h2>
-          <div className="mb-4">
-            <h3 className="text-xl font-medium text-gray-800">Search Executive</h3>
-            <p className="text-gray-600">GroupM, Mumbai | May 2023 - present</p>
-            <ul className="list-disc list-inside text-gray-600 mt-2">
-              <li>Spearheaded end-to-end campaign ideation, execution, and optimization</li>
-              <li>Managed and optimized bids to maximize ROI in paid search campaigns</li>
-              <li>Led A/B testing and continuous experimentation to refine marketing strategies</li>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nirzar Bhaidkar | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Nirzar Bhaidkar</h1>
+        <p>Performance Marketing Manager | Digital Advertising | Data-Driven Strategist</p>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-          </div>
-          <div>
-            <h3 className="text-xl font-medium text-gray-800">Analyst</h3>
-            <p className="text-gray-600">Publicis Groupe, Mumbai | Oct 2021 - Jul 2022</p>
-            <ul className="list-disc list-inside text-gray-600 mt-2">
-              <li>Developed and optimized PPC campaigns for customer retention and acquisition</li>
-              <li>Conducted Search Query Reporting (SQR) to improve ad performance</li>
-              <li>Managed bid strategies to enhance paid search effectiveness</li>
-            </ul>
-          </div>
-        </section>
+        </nav>
+    </header>
 
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4 text-gray-800 flex items-center">
-            <GraduationCap className="mr-2" /> Education
-          </h2>
-          <div className="mb-2">
-            <h3 className="text-xl font-medium text-gray-800">Master of Management Studies</h3>
-            <p className="text-gray-600">University of Mumbai | Pursuing</p>
-          </div>
-          <div>
-            <h3 className="text-xl font-medium text-gray-800">Bachelor of Engineering</h3>
-            <p className="text-gray-600">University of Mumbai | Graduated in 2020</p>
-          </div>
-        </section>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Dynamic and results-driven Performance Marketing Manager with 3+ years of experience in paid media, executing go-to-market strategies, and optimizing marketing performance.</p>
+    </section>
 
-        <section>
-          <h2 className="text-2xl font-semibold mb-4 text-gray-800 flex items-center">
-            <Award className="mr-2" /> Certifications
-          </h2>
-          <ul className="list-disc list-inside text-gray-600">
-            <li>Meta Certified Digital Marketing Associate</li>
-            <li>Google Digital Marketing & E-commerce Career Certificate</li>
-            <li>Google Ads Search Professional Certification</li>
-            <li>Meta Certified Media Buying Professional</li>
-            <li>Meta Certified Media Planning Professional</li>
-          </ul>
-        </section>
-      </main>
+    <section id="experience">
+        <h2>Experience</h2>
+        <h3>Executive | GroupM</h3>
+        <p>Led end-to-end campaign execution, optimizing paid search and achieving a 20% reduction in CPA.</p>
+        <h3>Analyst | Publicis</h3>
+        <p>Managed PPC campaigns, increasing sales by 30% through strategic bidding and SQR reporting.</p>
+    </section>
 
-      <footer className="w-full max-w-2xl mt-8 text-center text-gray-500">
-        <p>n.bhaidkar@gmail.com | 7709595965 | Mumbai, India</p>
-        <p>www.linkedin.com/in/nirzarbhaidkar/ | www.nirzar.in</p>
-      </footer>
-    </div>
-  );
-};
+    <section id="skills">
+        <h2>Skills & Certifications</h2>
+        <ul>
+            <li>PPC Campaign Management</li>
+            <li>Google Ads, SA 360, Meta Ads</li>
+            <li>Tableau & Data Analysis</li>
+            <li>Google Ads & Meta Certifications</li>
+        </ul>
+    </section>
 
-export default GoogleStylePortfolio;
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:n.bhaidkar@gmail.com">n.bhaidkar@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/nirzarbhaidkar" target="_blank">linkedin.com/in/nirzarbhaidkar</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Nirzar Bhaidkar. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

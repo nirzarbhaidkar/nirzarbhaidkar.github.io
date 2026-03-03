@@ -3,93 +3,289 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nirzar Bhaidkar - Resume</title>
+    <title>Nirzar Bhaidkar | Performance Marketing Manager</title>
+    <style>
+        :root {
+            --bg: #f4f7fb;
+            --surface: #ffffff;
+            --text: #152238;
+            --muted: #5f6b7c;
+            --primary: #2563eb;
+            --primary-soft: #dbeafe;
+            --border: #d9e1ef;
+            --shadow: 0 12px 36px rgba(21, 34, 56, 0.08);
+            --radius-lg: 20px;
+            --radius-md: 14px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text);
+            background:
+                radial-gradient(circle at 10% 10%, rgba(37, 99, 235, 0.1), transparent 38%),
+                radial-gradient(circle at 90% 0%, rgba(14, 165, 233, 0.08), transparent 32%),
+                var(--bg);
+            line-height: 1.65;
+        }
+
+        .page {
+            max-width: 1080px;
+            margin: 36px auto;
+            padding: 0 20px 28px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #172554, #1d4ed8 55%, #0ea5e9);
+            color: #fff;
+            border-radius: var(--radius-lg);
+            padding: 34px;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: auto -50px -80px auto;
+            width: 260px;
+            height: 260px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.14);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            letter-spacing: 0.01em;
+        }
+
+        .tagline {
+            margin-top: 10px;
+            font-weight: 500;
+            color: #dbeafe;
+        }
+
+        .contact-list {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .pill {
+            background: rgba(255, 255, 255, 0.16);
+            color: #eff6ff;
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            font-size: 0.92rem;
+            transition: background 0.2s ease;
+        }
+
+        .pill:hover {
+            background: rgba(255, 255, 255, 0.28);
+        }
+
+        .grid {
+            margin-top: 22px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 22px;
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+            padding: 24px;
+        }
+
+        .section-title {
+            margin: 0 0 14px;
+            font-size: 1.05rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--muted);
+        }
+
+        .summary {
+            margin: 0;
+            font-size: 1.01rem;
+        }
+
+        .timeline-item + .timeline-item {
+            margin-top: 22px;
+            padding-top: 22px;
+            border-top: 1px dashed var(--border);
+        }
+
+        .role {
+            margin: 0;
+            font-size: 1.15rem;
+        }
+
+        .meta {
+            margin: 4px 0 10px;
+            color: var(--muted);
+            font-weight: 500;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        li + li {
+            margin-top: 7px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .skills li {
+            margin: 0;
+            padding: 8px 10px;
+            border-radius: 10px;
+            background: var(--primary-soft);
+            color: #1e3a8a;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .panel + .panel {
+            margin-top: 20px;
+        }
+
+        .award {
+            padding: 14px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            background: linear-gradient(180deg, #fff, #f8fbff);
+            font-weight: 600;
+        }
+
+        @media (max-width: 900px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero,
+            .card {
+                padding: 22px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>NIRZAR BHAIDKAR</h1>
-    <p>
-        Mumbai, Maharashtra | <a href="tel:7709595965">7709595965</a> | <a href="mailto:nirzarbhaidkar@gmail.com">nirzarbhaidkar@gmail.com</a> | <a href="https://www.linkedin.com/in/nirzarbhaidkar/" target="_blank" rel="noopener noreferrer">LinkedIn</a> | <a href="https://www.nirzar.in" target="_blank" rel="noopener noreferrer">www.nirzar.in</a>
-    </p>
+    <main class="page">
+        <header class="hero">
+            <h1>Nirzar Bhaidkar</h1>
+            <p class="tagline">Performance Marketing Manager | Paid Media | Growth Strategy</p>
+            <div class="contact-list">
+                <span class="pill">Mumbai, Maharashtra</span>
+                <a class="pill" href="tel:7709595965">7709595965</a>
+                <a class="pill" href="mailto:nirzarbhaidkar@gmail.com">nirzarbhaidkar@gmail.com</a>
+                <a class="pill" href="https://www.linkedin.com/in/nirzarbhaidkar/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a class="pill" href="https://www.nirzar.in" target="_blank" rel="noopener noreferrer">www.nirzar.in</a>
+            </div>
+        </header>
 
-    <h2>SUMMARY</h2>
-    <p>
-        Experienced Performance Marketing Manager with a proven track record in driving digital marketing
-        strategies, optimizing campaigns, and increasing ROI. Skilled in data analysis, SEM, and social media
-        advertising, with a strong ability to translate insights into actionable plans. Adept at managing cross-
-        functional teams and delivering results in fast-paced environments. Committed to leveraging expertise to
-        enhance brand visibility and achieve business objectives.
-    </p>
+        <section class="grid">
+            <div>
+                <article class="card">
+                    <h2 class="section-title">Summary</h2>
+                    <p class="summary">
+                        Experienced Performance Marketing Manager with a proven record in driving digital growth,
+                        optimizing campaigns, and increasing ROI. Skilled in data analysis, SEM, and paid social,
+                        with a strong ability to turn insights into high-impact strategy. Experienced in collaborating
+                        across teams and delivering measurable outcomes in fast-paced environments.
+                    </p>
+                </article>
 
-    <hr>
+                <article class="card" style="margin-top: 20px;">
+                    <h2 class="section-title">Experience</h2>
 
-    <h2>EXPERIENCE</h2>
+                    <section class="timeline-item">
+                        <h3 class="role">Senior Executive — WPP Media</h3>
+                        <p class="meta">Mumbai, Maharashtra | 05/2023 – Present</p>
+                        <ul>
+                            <li>Managed a $15M+ annual portfolio for global brands across automotive, construction, and storage.</li>
+                            <li>Led end-to-end paid search and e-commerce campaign strategy, execution, and optimization.</li>
+                            <li>Improved SEM efficiency with precise bid management and KPI-driven adjustments.</li>
+                            <li>Delivered periodic account audits and actionable recommendations across keywords, creatives, and extensions.</li>
+                            <li>Developed weekly, seasonal, and annual reports to support strategic marketing decisions.</li>
+                        </ul>
+                    </section>
 
-    <h3>WPP Media, Mumbai, Maharashtra</h3>
-    <p>Senior Executive | 05/23 - Present</p>
-    <ul>
-        <li>Managed a $15M+ annual portfolio for leading global brands across the automotive, construction, and storage industries, ensuring optimal campaign performance and ROI.</li>
-        <li>Spearheaded end-to-end campaign ideation, execution, and optimization strategies, enhancing performance across paid search and E-Commerce initiatives.</li>
-        <li>Expertly managed bids to maximize efficiency and drive peak performance in SEM campaigns.</li>
-        <li>Monitored and analyzed key performance indicators (KPIs) to ensure alignment with client goals and data-driven decision-making.</li>
-        <li>Compiled weekly, seasonal, and annual performance reports to drive efficiency and marketing effectiveness for divisional campaigns.</li>
-        <li>Conducted periodic account audits to uncover optimization opportunities in keywords, ad creatives, and bid strategies.</li>
-        <li>Executed bulk uploads of fresh creatives, keywords, and extensions to maintain ad relevance and enhance engagement.</li>
-    </ul>
+                    <section class="timeline-item">
+                        <h3 class="role">Analyst — Publicis Groupe</h3>
+                        <p class="meta">Mumbai, Maharashtra | 10/2021 – 07/2022</p>
+                        <ul>
+                            <li>Managed and optimized paid campaigns across Google Ads, Bing, and paid social channels.</li>
+                            <li>Grew sales by 30% through retention-focused and acquisition-focused PPC programs.</li>
+                            <li>Boosted CTR by 15% with in-depth Search Query Reporting (SQR) and targeting refinements.</li>
+                            <li>Raised ROAS by 25% through data-backed bid strategy and ongoing experimentation.</li>
+                            <li>Improved campaign performance by 20% with reporting frameworks and A/B testing insights.</li>
+                        </ul>
+                    </section>
+                </article>
+            </div>
 
-    <h3>PUBLICIS GROUPE, Mumbai, Maharashtra</h3>
-    <p>Analyst | 10/21 - 07/22</p>
-    <ul>
-        <li>Implemented, managed, and optimized paid campaigns across paid social, Google Ads, and Bing, expanding reach and audience engagement.</li>
-        <li>Developed and optimized PPC campaigns focusing on customer retention and acquisition, resulting in a 30% increase in sales.</li>
-        <li>Conducted in-depth Search Query Reporting (SQR) to refine ad targeting and boost performance, driving a 15% growth in click-through rates (CTR).</li>
-        <li>Executed data-driven bid strategies to enhance paid search effectiveness, achieving a 25% increase in return on ad spend (ROAS).</li>
-        <li>Delivered comprehensive performance reports to stakeholders, enabling strategic adjustments and contributing to a 20% improvement in overall campaign performance.</li>
-        <li>Perform A/B testing & ROI optimization for advertising campaigns.</li>
-    </ul>
+            <aside>
+                <article class="card panel">
+                    <h2 class="section-title">Education</h2>
+                    <p><strong>Bachelor of Engineering</strong><br>Computer Engineering</p>
+                    <p><strong>Master's in Management Studies</strong><br>Marketing</p>
+                </article>
 
-    <hr>
+                <article class="card panel">
+                    <h2 class="section-title">Core Skills</h2>
+                    <ul class="skills">
+                        <li>Data Analysis</li>
+                        <li>Google Ads</li>
+                        <li>Meta Ads</li>
+                        <li>LinkedIn Ads</li>
+                        <li>Bing Ads</li>
+                        <li>Campaign Management</li>
+                        <li>Bid Optimization</li>
+                        <li>A/B Testing</li>
+                        <li>Attribution</li>
+                        <li>SEO Basics</li>
+                        <li>CRO</li>
+                        <li>Budgeting</li>
+                    </ul>
+                </article>
 
-    <h2>EDUCATION</h2>
-    <p>Bachelor of Engineering (Computer Engineering)</p>
-    <p>Master's in Management Studies (Marketing)</p>
+                <article class="card panel">
+                    <h2 class="section-title">Certifications</h2>
+                    <ul>
+                        <li>Google Ads Search Professional Certification</li>
+                        <li>Google Digital Marketing and E-Commerce Professional Certificate</li>
+                        <li>Meta Social Media Marketing Professional Certificate</li>
+                        <li>Meta Certified Media Buying Professional</li>
+                        <li>Microsoft Advertising Search Certification</li>
+                    </ul>
+                </article>
 
-    <hr>
-
-    <h2>SKILLS</h2>
-    <ul>
-        <li>Data Analysis & Interpretation</li>
-        <li>Platform Proficiency (Google Ads, Facebook Ads, LinkedIn Ads, Bing Ads)</li>
-        <li>Campaign Management</li>
-        <li>Bid Management & Optimization</li>
-        <li>A/B Testing & Experimentation</li>
-        <li>Tracking & Attribution</li>
-        <li>Keyword Research & Management</li>
-        <li>Audience Targeting</li>
-        <li>Copywriting & Creative Strategy</li>
-        <li>Reporting & Communication</li>
-        <li>Excel/Spreadsheet Proficiency</li>
-        <li>Understanding of SEO</li>
-        <li>Strategic Thinking</li>
-        <li>Budget Management</li>
-        <li>CRO (Conversion Rate Optimization)</li>
-    </ul>
-
-    <hr>
-
-    <h2>CERTIFICATIONS</h2>
-    <ul>
-        <li>GOOGLE ADS SEARCH PROFESSIONAL CERTIFICATION</li>
-        <li>GOOGLE DIGITAL MARKETING AND E-COMMERCE PROFESSIONAL CERTIFICATE</li>
-        <li>META SOCIAL MEDIA MARKETING PROFESSIONAL CERTIFICATE</li>
-        <li>META CERTIFIED MEDIA BUYING PROFESSIONAL</li>
-        <li>MICROSOFT ADVERTISING SEARCH CERTIFICATION</li>
-    </ul>
-
-    <hr>
-
-    <h2>AWARDS</h2>
-    <ul>
-        <li>Google Online Marketing Challenge (Placed 15th from 4500 Teams Worldwide)</li>
-    </ul>
+                <article class="card panel">
+                    <h2 class="section-title">Award</h2>
+                    <div class="award">Google Online Marketing Challenge — Placed 15th among 4,500 teams worldwide</div>
+                </article>
+            </aside>
+        </section>
+    </main>
 </body>
 </html>

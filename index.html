@@ -3,93 +3,703 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nirzar Bhaidkar - Resume</title>
+    <meta name="description" content="Nirzar Bhaidkar - Performance Marketing Manager | Data-Driven Digital Marketing Strategist">
+    <title>Nirzar Bhaidkar - Performance Marketing Professional</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-dark: #0f172a;
+            --color-darkish: #1a234d;
+            --color-navy: #1e3a5f;
+            --color-light: #f0f4f8;
+            --color-text: #e2e8f0;
+            --color-text-muted: #94a3b8;
+            --color-accent: #06b6d4;
+            --color-accent-hover: #0891b2;
+            --color-success: #10b981;
+            --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-darkish) 100%);
+            color: var(--color-text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.5rem 2rem;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(6, 182, 212, 0.1);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--color-accent);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--color-text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-accent);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+        }
+
+        /* Main Container */
+        main {
+            padding-top: 5rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            padding: 4rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            gap: 4rem;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--color-light), var(--color-accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-content .title {
+            font-size: 1.5rem;
+            color: var(--color-accent);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: var(--color-text-muted);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            background: linear-gradient(135deg, var(--color-accent), var(--color-accent-hover));
+            color: var(--color-dark);
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(6, 182, 212, 0.3);
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .stat-box {
+            padding: 1.5rem;
+            background: rgba(30, 58, 95, 0.5);
+            border: 1px solid rgba(6, 182, 212, 0.2);
+            border-radius: 0.5rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--color-accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--color-text-muted);
+        }
+
+        .hero-visual {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .visual-circle {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.2), rgba(16, 185, 129, 0.2));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 6rem;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @media (max-width: 1024px) {
+            .hero {
+                grid-template-columns: 1fr;
+                min-height: auto;
+                padding: 3rem 1.5rem;
+            }
+
+            .visual-circle {
+                width: 250px;
+                height: 250px;
+                font-size: 5rem;
+            }
+        }
+
+        /* Experience Section */
+        .experience {
+            padding: 6rem 2rem;
+            background: rgba(26, 35, 77, 0.3);
+            border-top: 1px solid rgba(6, 182, 212, 0.1);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 4rem;
+            text-align: center;
+            color: var(--color-light);
+        }
+
+        .experience-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .experience-card {
+            padding: 2rem;
+            background: rgba(30, 58, 95, 0.4);
+            border: 1px solid rgba(6, 182, 212, 0.2);
+            border-radius: 0.75rem;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .experience-card:hover {
+            border-color: rgba(6, 182, 212, 0.5);
+            background: rgba(30, 58, 95, 0.6);
+            transform: translateY(-5px);
+        }
+
+        .company-name {
+            color: var(--color-accent);
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .position {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--color-light);
+        }
+
+        .duration {
+            color: var(--color-text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .achievements {
+            list-style: none;
+        }
+
+        .achievements li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--color-text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .achievements li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--color-success);
+            font-weight: bold;
+        }
+
+        /* Skills Section */
+        .skills {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            padding: 2rem;
+            background: rgba(30, 58, 95, 0.4);
+            border: 1px solid rgba(6, 182, 212, 0.2);
+            border-radius: 0.75rem;
+        }
+
+        .skill-category h3 {
+            color: var(--color-accent);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(6, 182, 212, 0.1);
+            color: var(--color-accent);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            border-radius: 0.375rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* Education & Certifications */
+        .education {
+            padding: 6rem 2rem;
+            background: rgba(26, 35, 77, 0.3);
+            border-top: 1px solid rgba(6, 182, 212, 0.1);
+        }
+
+        .education-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .education-box h3 {
+            color: var(--color-accent);
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+        }
+
+        .education-item,
+        .cert-item {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(6, 182, 212, 0.1);
+        }
+
+        .education-item:last-child,
+        .cert-item:last-child {
+            border-bottom: none;
+        }
+
+        .education-degree {
+            font-weight: 700;
+            color: var(--color-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .cert-item .cert-name {
+            color: var(--color-light);
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .cert-item .cert-issuer {
+            color: var(--color-text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Awards */
+        .awards-section {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            padding: 2rem;
+            border-radius: 0.75rem;
+            margin-top: 2rem;
+        }
+
+        .awards-section h4 {
+            color: var(--color-success);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .award-item {
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid rgba(16, 185, 129, 0.1);
+        }
+
+        .award-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .award-name {
+            font-weight: 600;
+            color: var(--color-light);
+            margin-bottom: 0.25rem;
+        }
+
+        .award-description {
+            color: var(--color-text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 6rem 2rem;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(26, 35, 77, 0.6));
+            border-top: 1px solid rgba(6, 182, 212, 0.1);
+        }
+
+        .contact h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .contact-link {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: rgba(6, 182, 212, 0.1);
+            color: var(--color-accent);
+            text-decoration: none;
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .contact-link:hover {
+            background: var(--color-accent);
+            color: var(--color-dark);
+            border-color: var(--color-accent);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(6, 182, 212, 0.1);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            border-radius: 50%;
+            color: var(--color-accent);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+        }
+
+        .social-link:hover {
+            background: var(--color-accent);
+            color: var(--color-dark);
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        footer {
+            padding: 2rem;
+            text-align: center;
+            color: var(--color-text-muted);
+            border-top: 1px solid rgba(6, 182, 212, 0.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .experience-grid,
+            .education-content {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 1.75rem;
+                margin-bottom: 2rem;
+            }
+
+            .hero-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-links {
+                flex-direction: column;
+            }
+
+            .contact-link {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>NIRZAR BHAIDKAR</h1>
-    <p>
-        Mumbai, Maharashtra | <a href="tel:7709595965">7709595965</a> | <a href="mailto:nirzarbhaidkar@gmail.com">nirzarbhaidkar@gmail.com</a> | <a href="https://www.linkedin.com/in/nirzarbhaidkar/" target="_blank" rel="noopener noreferrer">LinkedIn</a> | <a href="https://www.nirzar.in" target="_blank" rel="noopener noreferrer">www.nirzar.in</a>
-    </p>
+    <nav>
+        <a href="#home" class="nav-brand">NB</a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-    <h2>SUMMARY</h2>
-    <p>
-        Experienced Performance Marketing Manager with a proven track record in driving digital marketing
-        strategies, optimizing campaigns, and increasing ROI. Skilled in data analysis, SEM, and social media
-        advertising, with a strong ability to translate insights into actionable plans. Adept at managing cross-
-        functional teams and delivering results in fast-paced environments. Committed to leveraging expertise to
-        enhance brand visibility and achieve business objectives.
-    </p>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="about">
+            <div class="hero-content">
+                <h1>Nirzar Bhaidkar</h1>
+                <div class="title">Performance Marketing Manager</div>
+                <p>Data-driven marketing strategist transforming campaigns into measurable growth. Specialized in SEM, paid social, and data analysis with a proven track record of delivering $15M+ portfolio optimization and driving 25%+ ROAS improvements.</p>
+                
+                <a href="#contact" class="cta-button">Get In Touch</a>
 
-    <hr>
+                <div class="hero-stats">
+                    <div class="stat-box">
+                        <div class="stat-number">$15M+</div>
+                        <div class="stat-label">Annual Portfolio</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">25%+</div>
+                        <div class="stat-label">ROAS Increase</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="visual-circle">📊</div>
+            </div>
+        </section>
 
-    <h2>EXPERIENCE</h2>
+        <!-- Experience Section -->
+        <section class="experience" id="experience">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <div class="company-name">WPP Media</div>
+                    <div class="position">Senior Executive</div>
+                    <div class="duration">May 2023 - Present</div>
+                    <ul class="achievements">
+                        <li>Managed $15M+ annual portfolio across automotive, construction, and storage industries</li>
+                        <li>Led end-to-end campaign optimization, achieving 25% increase in ROAS</li>
+                        <li>Expertly managed SEM bid strategies maximizing efficiency</li>
+                        <li>Compiled weekly, seasonal, and annual performance reports</li>
+                        <li>Conducted periodic account audits uncovering optimization opportunities</li>
+                    </ul>
+                </div>
 
-    <h3>WPP Media, Mumbai, Maharashtra</h3>
-    <p>Senior Executive | 05/23 - Present</p>
-    <ul>
-        <li>Managed a $15M+ annual portfolio for leading global brands across the automotive, construction, and storage industries, ensuring optimal campaign performance and ROI.</li>
-        <li>Spearheaded end-to-end campaign ideation, execution, and optimization strategies, enhancing performance across paid search and E-Commerce initiatives.</li>
-        <li>Expertly managed bids to maximize efficiency and drive peak performance in SEM campaigns.</li>
-        <li>Monitored and analyzed key performance indicators (KPIs) to ensure alignment with client goals and data-driven decision-making.</li>
-        <li>Compiled weekly, seasonal, and annual performance reports to drive efficiency and marketing effectiveness for divisional campaigns.</li>
-        <li>Conducted periodic account audits to uncover optimization opportunities in keywords, ad creatives, and bid strategies.</li>
-        <li>Executed bulk uploads of fresh creatives, keywords, and extensions to maintain ad relevance and enhance engagement.</li>
-    </ul>
+                <div class="experience-card">
+                    <div class="company-name">Publicis Groupe</div>
+                    <div class="position">Analyst</div>
+                    <div class="duration">October 2021 - July 2022</div>
+                    <ul class="achievements">
+                        <li>Managed multi-channel paid campaigns across Google Ads, Facebook, and Bing</li>
+                        <li>Increased sales by 30% through PPC optimization</li>
+                        <li>Drove 15% CTR growth via advanced Search Query Reporting</li>
+                        <li>Delivered data-driven reports enabling strategic adjustments</li>
+                        <li>Performed A/B testing & ROI optimization across campaigns</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-    <h3>PUBLICIS GROUPE, Mumbai, Maharashtra</h3>
-    <p>Analyst | 10/21 - 07/22</p>
-    <ul>
-        <li>Implemented, managed, and optimized paid campaigns across paid social, Google Ads, and Bing, expanding reach and audience engagement.</li>
-        <li>Developed and optimized PPC campaigns focusing on customer retention and acquisition, resulting in a 30% increase in sales.</li>
-        <li>Conducted in-depth Search Query Reporting (SQR) to refine ad targeting and boost performance, driving a 15% growth in click-through rates (CTR).</li>
-        <li>Executed data-driven bid strategies to enhance paid search effectiveness, achieving a 25% increase in return on ad spend (ROAS).</li>
-        <li>Delivered comprehensive performance reports to stakeholders, enabling strategic adjustments and contributing to a 20% improvement in overall campaign performance.</li>
-        <li>Perform A/B testing & ROI optimization for advertising campaigns.</li>
-    </ul>
+        <!-- Skills Section -->
+        <section class="skills" id="skills">
+            <h2 class="section-title">Core Competencies</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Advertising Platforms</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Google Ads</span>
+                        <span class="skill-tag">Facebook Ads</span>
+                        <span class="skill-tag">LinkedIn Ads</span>
+                        <span class="skill-tag">Bing Ads</span>
+                    </div>
+                </div>
 
-    <hr>
+                <div class="skill-category">
+                    <h3>Core Skills</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">SEM</span>
+                        <span class="skill-tag">PPC</span>
+                        <span class="skill-tag">Campaign Management</span>
+                        <span class="skill-tag">Bid Optimization</span>
+                        <span class="skill-tag">A/B Testing</span>
+                    </div>
+                </div>
 
-    <h2>EDUCATION</h2>
-    <p>Bachelor of Engineering (Computer Engineering)</p>
-    <p>Master's in Management Studies (Marketing)</p>
+                <div class="skill-category">
+                    <h3>Data & Analysis</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Data Analysis</span>
+                        <span class="skill-tag">Excel</span>
+                        <span class="skill-tag">Tracking</span>
+                        <span class="skill-tag">Attribution</span>
+                        <span class="skill-tag">Reporting</span>
+                    </div>
+                </div>
 
-    <hr>
+                <div class="skill-category">
+                    <h3>Strategic Competencies</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">CRO</span>
+                        <span class="skill-tag">Audience Targeting</span>
+                        <span class="skill-tag">Keyword Research</span>
+                        <span class="skill-tag">Budget Management</span>
+                        <span class="skill-tag">Strategic Thinking</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <h2>SKILLS</h2>
-    <ul>
-        <li>Data Analysis & Interpretation</li>
-        <li>Platform Proficiency (Google Ads, Facebook Ads, LinkedIn Ads, Bing Ads)</li>
-        <li>Campaign Management</li>
-        <li>Bid Management & Optimization</li>
-        <li>A/B Testing & Experimentation</li>
-        <li>Tracking & Attribution</li>
-        <li>Keyword Research & Management</li>
-        <li>Audience Targeting</li>
-        <li>Copywriting & Creative Strategy</li>
-        <li>Reporting & Communication</li>
-        <li>Excel/Spreadsheet Proficiency</li>
-        <li>Understanding of SEO</li>
-        <li>Strategic Thinking</li>
-        <li>Budget Management</li>
-        <li>CRO (Conversion Rate Optimization)</li>
-    </ul>
+        <!-- Education & Certifications -->
+        <section class="education">
+            <h2 class="section-title">Education & Certifications</h2>
+            <div class="education-content">
+                <div class="education-box">
+                    <h3>Education</h3>
+                    <div class="education-item">
+                        <div class="education-degree">Bachelor of Engineering</div>
+                        <div class="education-degree">Computer Engineering</div>
+                    </div>
+                    <div class="education-item">
+                        <div class="education-degree">Master's in Management Studies</div>
+                        <div class="education-degree">Marketing</div>
+                    </div>
+                </div>
 
-    <hr>
+                <div class="education-box">
+                    <h3>Professional Certifications</h3>
+                    <div class="cert-item">
+                        <div class="cert-name">Google Ads Search Professional</div>
+                        <div class="cert-issuer">Google</div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-name">Google Digital Marketing & E-Commerce Professional</div>
+                        <div class="cert-issuer">Google</div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-name">Meta Social Media Marketing Professional</div>
+                        <div class="cert-issuer">Meta</div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-name">Meta Certified Media Buying Professional</div>
+                        <div class="cert-issuer">Meta</div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-name">Microsoft Advertising Search Certification</div>
+                        <div class="cert-issuer">Microsoft</div>
+                    </div>
 
-    <h2>CERTIFICATIONS</h2>
-    <ul>
-        <li>GOOGLE ADS SEARCH PROFESSIONAL CERTIFICATION</li>
-        <li>GOOGLE DIGITAL MARKETING AND E-COMMERCE PROFESSIONAL CERTIFICATE</li>
-        <li>META SOCIAL MEDIA MARKETING PROFESSIONAL CERTIFICATE</li>
-        <li>META CERTIFIED MEDIA BUYING PROFESSIONAL</li>
-        <li>MICROSOFT ADVERTISING SEARCH CERTIFICATION</li>
-    </ul>
+                    <div class="awards-section">
+                        <h4>Awards & Recognition</h4>
+                        <div class="award-item">
+                            <div class="award-name">Google Online Marketing Challenge</div>
+                            <div class="award-description">Placed 15th from 4,500 teams worldwide</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <hr>
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <h2>Let's Connect</h2>
+            <div class="contact-links">
+                <a href="mailto:nirzarbhaidkar@gmail.com" class="contact-link">Email</a>
+                <a href="tel:7709595965" class="contact-link">Call</a>
+                <a href="https://www.linkedin.com/in/nirzarbhaidkar/" target="_blank" rel="noopener noreferrer" class="contact-link">LinkedIn</a>
+                <a href="https://www.nirzar.in" target="_blank" rel="noopener noreferrer" class="contact-link">Website</a>
+            </div>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/nirzarbhaidkar/" target="_blank" rel="noopener noreferrer" class="social-link">in</a>
+                <a href="mailto:nirzarbhaidkar@gmail.com" class="social-link">✉</a>
+            </div>
+        </section>
+    </main>
 
-    <h2>AWARDS</h2>
-    <ul>
-        <li>Google Online Marketing Challenge (Placed 15th from 4500 Teams Worldwide)</li>
-    </ul>
+    <footer>
+        <p>&copy; 2024 Nirzar Bhaidkar. All rights reserved.</p>
+    </footer>
 </body>
 </html>

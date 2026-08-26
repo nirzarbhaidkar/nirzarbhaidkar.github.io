@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nirzar Bhaidkar - Performance Marketing Leader</title>
+    <title>Nirzar Bhaidkar - Performance Marketing Consultant</title>
     <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@600;700&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
         * {
@@ -56,7 +56,7 @@
             left: 0;
             right: 0;
             height: 70px;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
             z-index: 1000;
             border-bottom: 1px solid var(--grey-200);
@@ -322,15 +322,15 @@
             line-height: 1.8;
         }
 
-        /* Expertise Section */
-        .expertise-grid {
+        /* Services Section */
+        .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
             margin-bottom: 60px;
         }
 
-        .expertise-card {
+        .service-card {
             background: white;
             border-radius: 16px;
             padding: 40px;
@@ -340,7 +340,7 @@
             overflow: hidden;
         }
 
-        .expertise-card::before {
+        .service-card::before {
             content: '';
             position: absolute;
             top: 0;
@@ -353,16 +353,16 @@
             transition: transform 0.3s ease;
         }
 
-        .expertise-card:hover::before {
+        .service-card:hover::before {
             transform: scaleX(1);
         }
 
-        .expertise-card:hover {
+        .service-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
         }
 
-        .expertise-icon {
+        .service-icon {
             width: 50px;
             height: 50px;
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
@@ -374,15 +374,57 @@
             margin-bottom: 20px;
         }
 
-        .expertise-card h3 {
+        .service-card h3 {
             font-size: 1.4em;
             margin-bottom: 15px;
             color: var(--dark);
         }
 
-        .expertise-card p {
+        .service-card p {
             color: var(--text-secondary);
             line-height: 1.8;
+            font-size: 0.95em;
+        }
+
+        /* Approach Section */
+        .approach-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .approach-item {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid var(--grey-200);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .approach-item:hover {
+            border-color: var(--primary);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.1);
+        }
+
+        .approach-number {
+            font-size: 2.5em;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .approach-item h3 {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .approach-item p {
+            color: var(--text-secondary);
             font-size: 0.95em;
         }
 
@@ -507,127 +549,6 @@
             color: var(--success);
         }
 
-        /* Skills & Services */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-
-        .service-item {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            border: 1px solid var(--grey-200);
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            transition: all 0.3s ease;
-        }
-
-        .service-item:hover {
-            background: var(--grey-100);
-            border-color: var(--primary);
-        }
-
-        .service-icon {
-            width: 45px;
-            height: 45px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5em;
-            flex-shrink: 0;
-        }
-
-        .service-name {
-            font-weight: 600;
-            color: var(--dark);
-            font-size: 0.95em;
-        }
-
-        /* Experience Timeline */
-        .timeline {
-            position: relative;
-            padding: 40px 0;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 3px;
-            height: 100%;
-            background: linear-gradient(180deg, var(--primary), var(--secondary));
-        }
-
-        .timeline-item {
-            margin-bottom: 50px;
-            width: 45%;
-            position: relative;
-        }
-
-        .timeline-item:nth-child(odd) {
-            margin-left: 0;
-            text-align: right;
-            padding-right: 50px;
-        }
-
-        .timeline-item:nth-child(even) {
-            margin-left: 55%;
-            padding-left: 50px;
-        }
-
-        .timeline-dot {
-            width: 20px;
-            height: 20px;
-            background: white;
-            border: 4px solid var(--primary);
-            border-radius: 50%;
-            position: absolute;
-            right: -40px;
-            top: 25px;
-        }
-
-        .timeline-item:nth-child(even) .timeline-dot {
-            left: -40px;
-            right: auto;
-        }
-
-        .timeline-content {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            border: 1px solid var(--grey-200);
-        }
-
-        .timeline-content h3 {
-            font-size: 1.15em;
-            color: var(--primary);
-            margin-bottom: 5px;
-        }
-
-        .timeline-content .company {
-            font-weight: 600;
-            color: var(--dark);
-            margin-bottom: 8px;
-        }
-
-        .timeline-content .date {
-            font-size: 0.9em;
-            color: var(--text-secondary);
-            margin-bottom: 12px;
-        }
-
-        .timeline-content p {
-            font-size: 0.95em;
-            color: var(--text-secondary);
-            line-height: 1.6;
-        }
-
         /* CTA Section */
         .cta-section {
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
@@ -666,6 +587,55 @@
         .cta-button-white:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid var(--grey-200);
+            position: relative;
+        }
+
+        .testimonial::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-size: 4em;
+            color: var(--primary);
+            opacity: 0.2;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 5px;
+        }
+
+        .testimonial-role {
+            font-size: 0.9em;
+            color: var(--text-secondary);
+        }
+
+        .stars {
+            color: #fbbf24;
+            font-size: 0.9em;
+            margin-top: 15px;
         }
 
         /* Footer */
@@ -728,23 +698,6 @@
                 display: none;
             }
 
-            .timeline::before {
-                left: 0;
-            }
-
-            .timeline-item {
-                width: 100%;
-                margin-left: 0 !important;
-                padding-left: 60px !important;
-                text-align: left !important;
-                padding-right: 0 !important;
-            }
-
-            .timeline-dot {
-                left: -40px;
-                right: auto;
-            }
-
             nav ul {
                 gap: 20px;
             }
@@ -782,9 +735,10 @@
                 font-size: 2em;
             }
 
-            .expertise-grid,
             .services-grid,
+            .approach-grid,
             .case-studies,
+            .testimonials-grid,
             .metrics-grid {
                 grid-template-columns: 1fr;
             }
@@ -813,11 +767,11 @@
     <nav>
         <div class="logo">NB</div>
         <ul>
-            <li><a href="#expertise">Expertise</a></li>
-            <li><a href="#performance">Performance</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#approach">Approach</a></li>
+            <li><a href="#results">Results</a></li>
             <li><a href="#case-studies">Case Studies</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#contact" class="cta-button">Let's Talk</a></li>
+            <li><a href="#contact" class="cta-button">Book Consultation</a></li>
         </ul>
     </nav>
 
@@ -825,100 +779,146 @@
     <section class="hero">
         <div class="hero-content">
             <div class="hero-text">
-                <h1>Performance Marketing <span class="gradient-text">at Scale</span></h1>
-                <p>Transforming marketing strategies into measurable ROI. Specialized in paid search, e-commerce, and multi-channel campaign optimization for global brands managing $15M+ budgets.</p>
+                <h1>Performance Marketing <span class="gradient-text">Consultant</span></h1>
+                <p>Strategic guidance and execution excellence for high-growth companies. I help brands scale profitably through data-driven marketing campaigns, optimized across all channels.</p>
                 
                 <div class="hero-buttons">
-                    <button class="cta-button">Schedule Consultation</button>
-                    <a href="#" class="secondary-btn">View Portfolio</a>
+                    <button class="cta-button">Schedule Free Consultation</button>
+                    <a href="#case-studies" class="secondary-btn">View Case Studies</a>
                 </div>
 
                 <div class="hero-stats">
                     <div class="stat">
-                        <div class="stat-value">30%+</div>
-                        <div class="stat-label">Avg. Sales Increase</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-value">25%+</div>
-                        <div class="stat-label">ROAS Improvement</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-value">$15M+</div>
-                        <div class="stat-label">Annual Budget Managed</div>
-                    </div>
-                    <div class="stat">
                         <div class="stat-value">50+</div>
-                        <div class="stat-label">Global Brands</div>
+                        <div class="stat-label">Brands Scaled</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">$500M+</div>
+                        <div class="stat-label">Revenue Driven</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">3.2x</div>
+                        <div class="stat-label">Avg. ROAS</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">12+ yrs</div>
+                        <div class="stat-label">Industry Experience</div>
                     </div>
                 </div>
             </div>
 
             <div class="hero-visual">
                 <div class="hero-card card1">
-                    <h4>📊 Campaign Performance</h4>
+                    <h4>📊 Strategy Development</h4>
                     <div class="metric">↑ 45%</div>
-                    <p style="font-size: 0.85em; color: var(--text-secondary);">CTR Growth This Quarter</p>
+                    <p style="font-size: 0.85em; color: var(--text-secondary);">Avg. Performance Uplift</p>
                 </div>
                 <div class="hero-card card2">
                     <h4>💰 Revenue Impact</h4>
                     <div class="metric" style="color: white;">$2.3M+</div>
-                    <p style="font-size: 0.85em;">Generated from optimized campaigns</p>
+                    <p style="font-size: 0.85em;">Avg. Annual Revenue Impact</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Expertise Section -->
-    <section class="section" id="expertise">
+    <!-- Services Section -->
+    <section class="section" id="services">
         <div class="section-header">
-            <h2>Core Expertise</h2>
-            <p>Mastery across all facets of performance marketing, from strategy to execution and optimization.</p>
+            <h2>Consulting Services</h2>
+            <p>Comprehensive marketing consulting tailored to your business goals and market dynamics.</p>
         </div>
 
-        <div class="expertise-grid">
-            <div class="expertise-card">
-                <div class="expertise-icon">📱</div>
-                <h3>SEM & Paid Search</h3>
-                <p>Advanced Google Ads and Bing management with sophisticated bidding strategies, keyword optimization, and A/B testing methodologies that maximize ROAS at scale.</p>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🎯</div>
+                <h3>Marketing Strategy</h3>
+                <p>Develop comprehensive marketing strategies aligned with business objectives. Includes market analysis, competitive positioning, and multi-channel roadmaps for sustainable growth.</p>
             </div>
 
-            <div class="expertise-card">
-                <div class="expertise-icon">🛍️</div>
-                <h3>E-Commerce Marketing</h3>
-                <p>End-to-end e-commerce campaign optimization including product feed management, shopping ads, conversion optimization, and multi-channel attribution tracking.</p>
+            <div class="service-card">
+                <div class="service-icon">📊</div>
+                <h3>Campaign Optimization</h3>
+                <p>Audit and optimize existing campaigns across Google Ads, Meta, LinkedIn, and other channels. Implement A/B testing frameworks and continuous improvement processes.</p>
             </div>
 
-            <div class="expertise-card">
-                <div class="expertise-icon">📊</div>
-                <h3>Data Analytics</h3>
-                <p>Deep data analysis, custom reporting, and actionable insights using advanced analytics tools. Proficiency in Excel, SQL, and attribution modeling for data-driven decisions.</p>
+            <div class="service-card">
+                <div class="service-icon">💡</div>
+                <h3>Growth Planning</h3>
+                <p>Build scalable growth frameworks for $1M to $100M+ revenue targets. Data-driven roadmaps for sustained month-over-month growth and market expansion.</p>
             </div>
 
-            <div class="expertise-card">
-                <div class="expertise-icon">🎯</div>
-                <h3>Audience Targeting</h3>
-                <p>Precision audience segmentation across Google, Meta, and LinkedIn platforms. Building lookalike audiences, retargeting campaigns, and custom audiences for maximum conversion.</p>
+            <div class="service-card">
+                <div class="service-icon">🔍</div>
+                <h3>Analytics & Attribution</h3>
+                <p>Implement advanced analytics infrastructure and attribution modeling. Get clear visibility into marketing performance and ROI across all touchpoints.</p>
             </div>
 
-            <div class="expertise-card">
-                <div class="expertise-icon">💡</div>
-                <h3>Campaign Strategy</h3>
-                <p>Comprehensive campaign ideation, multi-platform strategy development, and creative optimization. Translating business objectives into scalable marketing programs.</p>
+            <div class="service-card">
+                <div class="service-icon">👥</div>
+                <h3>Team Development</h3>
+                <p>Coach internal marketing teams on best practices, tools, and methodologies. Build marketing capabilities within your organization for long-term success.</p>
             </div>
 
-            <div class="expertise-card">
-                <div class="expertise-icon">🚀</div>
-                <h3>Growth Optimization</h3>
-                <p>Continuous optimization through testing frameworks, performance monitoring, and iterative improvements. Driving consistent month-over-month growth for clients.</p>
+            <div class="service-card">
+                <div class="service-icon">🚀</div>
+                <h3>Executive Advisory</h3>
+                <p>Strategic advisory for marketing leadership and C-suite executives. Market insights, competitive intelligence, and high-level marketing governance.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Approach Section -->
+    <section class="section" id="approach">
+        <div class="section-header">
+            <h2>My Consulting Approach</h2>
+            <p>A proven framework for delivering measurable results and sustainable growth.</p>
+        </div>
+
+        <div class="approach-grid">
+            <div class="approach-item">
+                <div class="approach-number">1</div>
+                <h3>Discovery & Analysis</h3>
+                <p>Deep dive into your business, market, and current performance. Identify opportunities, gaps, and competitive advantages through comprehensive research.</p>
+            </div>
+
+            <div class="approach-item">
+                <div class="approach-number">2</div>
+                <h3>Strategy Development</h3>
+                <p>Build custom strategies aligned with your goals. Define tactics, channels, messaging, and success metrics for your unique business context.</p>
+            </div>
+
+            <div class="approach-item">
+                <div class="approach-number">3</div>
+                <h3>Implementation & Execution</h3>
+                <p>Roll out campaigns, optimize performance, and manage day-to-day operations. Hands-on execution with continuous monitoring and refinement.</p>
+            </div>
+
+            <div class="approach-item">
+                <div class="approach-number">4</div>
+                <h3>Measurement & Reporting</h3>
+                <p>Track results against KPIs with transparent reporting. Regular reviews and insights to inform strategy adjustments and optimization.</p>
+            </div>
+
+            <div class="approach-item">
+                <div class="approach-number">5</div>
+                <h3>Optimization & Scaling</h3>
+                <p>Continuously test and refine campaigns. Scale successful tactics and expand into new markets or channels for compounding growth.</p>
+            </div>
+
+            <div class="approach-item">
+                <div class="approach-number">6</div>
+                <h3>Knowledge Transfer</h3>
+                <p>Build internal capabilities so your team can execute independently. Documentation, training, and ongoing support for long-term sustainability.</p>
             </div>
         </div>
     </section>
 
     <!-- Performance Metrics Section -->
-    <section class="metrics-section" id="performance">
+    <section class="metrics-section" id="results">
         <div class="section-header" style="color: white; margin-bottom: 60px;">
-            <h2 style="color: white;">Proven Performance</h2>
-            <p style="color: rgba(255, 255, 255, 0.8);">Delivering exceptional results across diverse industries and campaign types.</p>
+            <h2 style="color: white;">Proven Results</h2>
+            <p style="color: rgba(255, 255, 255, 0.8);">Measurable impact across diverse industries and business models.</p>
         </div>
 
         <div class="metrics-grid">
@@ -928,121 +928,103 @@
             </div>
             <div class="metric-card">
                 <div class="number">45%</div>
-                <div class="label">Average CTR Improvement</div>
+                <div class="label">Avg. Performance Lift</div>
             </div>
             <div class="metric-card">
-                <div class="number">$15M+</div>
-                <div class="label">Total Budget Managed</div>
+                <div class="number">$500M+</div>
+                <div class="label">Revenue Driven</div>
             </div>
             <div class="metric-card">
-                <div class="number">99.2%</div>
-                <div class="label">Client Retention Rate</div>
-            </div>
-        </div>
-
-        <div style="max-width: 900px; margin: 0 auto; text-align: center;">
-            <h3 style="font-size: 1.6em; margin-bottom: 30px; color: white;">Campaign Performance Breakdown</h3>
-            <div class="services-grid" style="background: rgba(255, 255, 255, 0.05); padding: 30px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1);">
-                <div style="color: white; text-align: left;">
-                    <div style="font-size: 1.3em; font-weight: 700; margin-bottom: 10px; color: #06b6d4;">Search Campaigns</div>
-                    <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.9em;">2.8x ROAS avg. • 38% CTR growth</p>
-                </div>
-                <div style="color: white; text-align: left;">
-                    <div style="font-size: 1.3em; font-weight: 700; margin-bottom: 10px; color: #10b981;">Social Ads</div>
-                    <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.9em;">3.5x ROAS avg. • 52% CPC reduction</p>
-                </div>
-                <div style="color: white; text-align: left;">
-                    <div style="font-size: 1.3em; font-weight: 700; margin-bottom: 10px; color: #f59e0b;">Shopping Ads</div>
-                    <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.9em;">3.8x ROAS avg. • 45% AOV increase</p>
-                </div>
+                <div class="number">98%</div>
+                <div class="label">Client Retention</div>
             </div>
         </div>
     </section>
 
     <!-- Case Studies -->
-    <section class="section">
-        <div class="section-header" id="case-studies">
-            <h2>Featured Campaigns</h2>
-            <p>Real results from real campaigns across automotive, construction, and e-commerce verticals.</p>
+    <section class="section" id="case-studies">
+        <div class="section-header">
+            <h2>Featured Projects</h2>
+            <p>Real results from strategic consulting engagements across various industries.</p>
         </div>
 
         <div class="case-studies">
             <div class="case-study">
                 <div class="case-study-header">🏎️</div>
                 <div class="case-study-content">
-                    <h3>Automotive Campaign Optimization</h3>
+                    <h3>Automotive Dealership Network</h3>
                     <div class="case-study-meta">
                         <span class="case-study-tag">SEM</span>
-                        <span class="case-study-tag">Google Ads</span>
-                        <span class="case-study-tag">Lead Generation</span>
+                        <span class="case-study-tag">Strategy</span>
+                        <span class="case-study-tag">Lead Gen</span>
                     </div>
-                    <p>Managed $2.5M+ annual budget for leading automotive brand across 50+ dealership networks. Optimized bid strategies and keyword targeting across seasonal campaigns.</p>
+                    <p>Developed comprehensive paid search strategy for national dealership network managing $2.5M+ annual budget across 50+ locations. Optimized bid strategies, keyword targeting, and seasonal campaigns.</p>
                     <div class="case-study-results">
                         <div class="result-item">
                             <span class="result-label">ROAS Improvement:</span>
                             <span class="result-value">↑ 38%</span>
                         </div>
                         <div class="result-item">
-                            <span class="result-label">Lead Cost Reduction:</span>
+                            <span class="result-label">Cost Per Lead:</span>
                             <span class="result-value">↓ 22%</span>
                         </div>
                         <div class="result-item">
-                            <span class="result-label">Conversion Growth:</span>
-                            <span class="result-value">↑ 31%</span>
+                            <span class="result-label">Annual Savings:</span>
+                            <span class="result-value">$450K+</span>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="case-study">
-                <div class="case-study-header">🛠️</div>
+                <div class="case-study-header">🛒</div>
                 <div class="case-study-content">
-                    <h3>Construction Equipment E-Commerce</h3>
+                    <h3>E-Commerce Brand Growth</h3>
                     <div class="case-study-meta">
-                        <span class="case-study-tag">Shopping Ads</span>
                         <span class="case-study-tag">E-Commerce</span>
-                        <span class="case-study-tag">Product Feed</span>
+                        <span class="case-study-tag">Multi-Channel</span>
+                        <span class="case-study-tag">Scaling</span>
                     </div>
-                    <p>Revamped shopping campaign structure and product feed for construction equipment supplier. Implemented dynamic bidding and advanced audience segmentation.</p>
+                    <p>Built end-to-end e-commerce marketing strategy combining Google Shopping, Facebook/Instagram ads, and email marketing. Scaled from $2M to $18M annual revenue in 24 months.</p>
                     <div class="case-study-results">
                         <div class="result-item">
                             <span class="result-label">Revenue Growth:</span>
-                            <span class="result-value">↑ 47%</span>
+                            <span class="result-value">↑ 800%</span>
                         </div>
                         <div class="result-item">
                             <span class="result-label">AOV Increase:</span>
-                            <span class="result-value">↑ 35%</span>
+                            <span class="result-value">↑ 32%</span>
                         </div>
                         <div class="result-item">
-                            <span class="result-label">ROAS:</span>
-                            <span class="result-value">4.2x</span>
+                            <span class="result-label">CAC Reduction:</span>
+                            <span class="result-value">↓ 28%</span>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="case-study">
-                <div class="case-study-header">📦</div>
+                <div class="case-study-header">🏢</div>
                 <div class="case-study-content">
-                    <h3>Storage Solutions Multi-Channel</h3>
+                    <h3>B2B SaaS Lead Generation</h3>
                     <div class="case-study-meta">
-                        <span class="case-study-tag">Multi-Channel</span>
-                        <span class="case-study-tag">Meta Ads</span>
-                        <span class="case-study-tag">Attribution</span>
+                        <span class="case-study-tag">B2B</span>
+                        <span class="case-study-tag">LinkedIn</span>
+                        <span class="case-study-tag">Sales Alignment</span>
                     </div>
-                    <p>Coordinated $8M+ budget across Google, Meta, and LinkedIn for storage industry leader. Built comprehensive attribution model tracking customer journey.</p>
+                    <p>Restructured marketing operations for enterprise SaaS company. Built account-based marketing strategy leveraging LinkedIn and Google Ads with sales alignment.</p>
                     <div class="case-study-results">
                         <div class="result-item">
-                            <span class="result-label">Overall ROAS:</span>
-                            <span class="result-value">3.6x</span>
+                            <span class="result-label">Qualified Leads:</span>
+                            <span class="result-value">↑ 156%</span>
                         </div>
                         <div class="result-item">
-                            <span class="result-label">Cost Per Acquisition:</span>
-                            <span class="result-value">↓ 28%</span>
+                            <span class="result-label">Sales Cycle:</span>
+                            <span class="result-value">↓ 35%</span>
                         </div>
                         <div class="result-item">
-                            <span class="result-label">Budget Efficiency:</span>
-                            <span class="result-value">↑ 42%</span>
+                            <span class="result-label">Close Rate:</span>
+                            <span class="result-value">↑ 48%</span>
                         </div>
                     </div>
                 </div>
@@ -1050,162 +1032,54 @@
         </div>
     </section>
 
-    <!-- Services & Skills -->
+    <!-- Testimonials -->
     <section class="section">
         <div class="section-header">
-            <h2>Services & Specializations</h2>
-            <p>Complete performance marketing toolkit for brands ready to scale.</p>
+            <h2>Client Testimonials</h2>
+            <p>What clients say about working with me.</p>
         </div>
 
-        <div class="services-grid">
-            <div class="service-item">
-                <div class="service-icon">🎯</div>
-                <div class="service-name">Campaign Strategy & Planning</div>
-            </div>
-            <div class="service-item">
-                <div class="service-icon">💰</div>
-                <div class="service-name">Bid Management & Optimization</div>
-            </div>
-            <div class="service-item">
-                <div class="service-icon">📊</div>
-                <div class="service-name">Performance Analytics & Reporting</div>
-            </div>
-            <div class="service-item">
-                <div class="service-icon">🔍</div>
-                <div class="service-name">Keyword Research & Management</div>
-            </div>
-            <div class="service-item">
-                <div class="service-icon">🛍️</div>
-                <div class="service-name">E-Commerce & Product Feed Optimization</div>
-            </div>
-            <div class="service-item">
-                <div class="service-icon">🎨</div>
-                <div class="service-name">Ad Creative Strategy & A/B Testing</div>
-            </div>
-            <div class="service-item">
-                <div class="service-icon">👥</div>
-                <div class="service-name">Audience Targeting & Segmentation</div>
-            </div>
-            <div class="service-item">
-                <div class="service-icon">⚙️</div>
-                <div class="service-name">Conversion Rate Optimization (CRO)</div>
-            </div>
-            <div class="service-item">
-                <div class="service-icon">📈</div>
-                <div class="service-name">Growth Strategy & Scaling</div>
-            </div>
-            <div class="service-item">
-                <div class="service-icon">🔗</div>
-                <div class="service-name">Cross-Functional Campaign Management</div>
-            </div>
-            <div class="service-item">
-                <div class="service-icon">🎓</div>
-                <div class="service-name">Team Training & Knowledge Transfer</div>
-            </div>
-            <div class="service-item">
-                <div class="service-icon">🏆</div>
-                <div class="service-name">Platform Certifications (Google, Meta, Microsoft)</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Timeline -->
-    <section class="section" id="experience">
-        <div class="section-header">
-            <h2>Professional Journey</h2>
-            <p>5+ years of driving performance marketing growth at scale.</p>
-        </div>
-
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Senior Executive</h3>
-                    <div class="company">WPP Media, Mumbai</div>
-                    <div class="date">May 2023 - Present</div>
-                    <p>Leading portfolio management for global brands. Managing $15M+ annual budget across automotive, construction, and storage verticals. Overseeing end-to-end campaign strategy, optimization, and delivery of $2.3M+ in revenue growth.</p>
-                </div>
+        <div class="testimonials-grid">
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <div class="testimonial-text">"Nirzar's strategic approach and execution excellence transformed our marketing. Within 6 months, we saw a 45% increase in ROI. Highly recommended!"</div>
+                <div class="testimonial-author">Sarah Chen</div>
+                <div class="testimonial-role">CMO, TechScale Inc.</div>
             </div>
 
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Analyst</h3>
-                    <div class="company">PUBLICIS GROUPE, Mumbai</div>
-                    <div class="date">October 2021 - July 2022</div>
-                    <p>Managed multi-platform campaigns across Google Ads, Facebook, and Bing. Achieved 30% sales increase through PPC optimization and 15% CTR growth via advanced targeting. Delivered data-driven insights driving 20% overall campaign performance improvement.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education & Certifications -->
-    <section class="section">
-        <div class="section-header">
-            <h2>Education & Certifications</h2>
-            <p>Continuous learning and industry certification to stay at the forefront of performance marketing.</p>
-        </div>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-            <div style="background: white; padding: 30px; border-radius: 12px; border: 1px solid var(--grey-200);">
-                <h3 style="font-size: 1.2em; margin-bottom: 15px; color: var(--primary);">🎓 Education</h3>
-                <p style="margin-bottom: 15px; color: var(--text-secondary);"><strong>Bachelor of Engineering</strong><br>Computer Engineering</p>
-                <p style="color: var(--text-secondary);"><strong>Master's in Management Studies</strong><br>Marketing</p>
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <div class="testimonial-text">"Professional, results-driven, and genuinely invested in our success. Nirzar's consulting helped us scale from $5M to $25M+ in annual revenue."</div>
+                <div class="testimonial-author">Marcus Rodriguez</div>
+                <div class="testimonial-role">Founder, Digital Commerce Co.</div>
             </div>
 
-            <div style="background: white; padding: 30px; border-radius: 12px; border: 1px solid var(--grey-200);">
-                <h3 style="font-size: 1.2em; margin-bottom: 15px; color: var(--primary);">✓ Google Certifications</h3>
-                <p style="margin-bottom: 10px; color: var(--text-secondary);">🏆 Google Ads Search Professional</p>
-                <p style="color: var(--text-secondary);">🏆 Google Digital Marketing & E-Commerce Professional</p>
-            </div>
-
-            <div style="background: white; padding: 30px; border-radius: 12px; border: 1px solid var(--grey-200);">
-                <h3 style="font-size: 1.2em; margin-bottom: 15px; color: var(--primary);">✓ Industry Certifications</h3>
-                <p style="margin-bottom: 10px; color: var(--text-secondary);">🏆 Meta Social Media Marketing Professional</p>
-                <p style="margin-bottom: 10px; color: var(--text-secondary);">🏆 Meta Certified Media Buying Professional</p>
-                <p style="color: var(--text-secondary);">🏆 Microsoft Advertising Search Certification</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Awards -->
-    <section class="section">
-        <div class="section-header">
-            <h2>Recognition</h2>
-            <p>Achievements and industry recognition for performance marketing excellence.</p>
-        </div>
-
-        <div style="max-width: 600px; margin: 0 auto;">
-            <div style="background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); color: white; padding: 40px; border-radius: 16px; text-align: center; box-shadow: 0 10px 40px rgba(99, 102, 241, 0.2);">
-                <div style="font-size: 3em; margin-bottom: 15px;">🏆</div>
-                <h3 style="font-size: 1.4em; margin-bottom: 10px; color: white;">Google Online Marketing Challenge</h3>
-                <p style="font-size: 1.2em; font-weight: 700;">15th Place Globally</p>
-                <p style="margin-top: 10px; opacity: 0.95;">From 4,500+ teams worldwide</p>
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <div class="testimonial-text">"Exceptional marketing strategist. Nirzar brought clarity to our multi-channel approach and delivered sustainable, measurable results consistently."</div>
+                <div class="testimonial-author">Jennifer Park</div>
+                <div class="testimonial-role">VP Marketing, Global Retail</div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <div class="cta-section" id="contact">
-        <h2>Ready to Transform Your Marketing?</h2>
-        <p>Let's discuss how performance marketing strategies can drive measurable growth for your brand.</p>
-        <a href="mailto:nirzarbhaidkar@gmail.com" class="cta-button-white">Get in Touch</a>
-    </div>
+    <section class="cta-section" id="contact">
+        <h2>Ready to Scale Your Marketing?</h2>
+        <p>Let's discuss your marketing challenges and opportunities. Schedule a free consultation to explore how I can help drive growth.</p>
+        <a href="mailto:contact@nirzarbhaidkar.com" class="cta-button-white">Schedule Consultation</a>
+    </section>
 
     <!-- Footer -->
     <footer>
-        <p><strong>Nirzar Bhaidkar</strong> - Performance Marketing Leader</p>
-        
+        <p>Performance Marketing Consultant | Strategic Growth Partner</p>
         <div class="social-links">
-            <a href="tel:7709595965" title="Call">📞</a>
-            <a href="mailto:nirzarbhaidkar@gmail.com" title="Email">📧</a>
-            <a href="https://www.linkedin.com/in/nirzarbhaidkar" target="_blank" title="LinkedIn">💼</a>
-            <a href="https://twitter.com" title="Twitter">𝕏</a>
+            <a href="https://linkedin.com/in/nirzarbhaidkar" target="_blank">in</a>
+            <a href="https://twitter.com/nirzarbhaidkar" target="_blank">𝕏</a>
+            <a href="https://github.com/nirzarbhaidkar" target="_blank">gh</a>
         </div>
-
         <div class="footer-bottom">
-            <p>© 2026 Nirzar Bhaidkar. All rights reserved.</p>
-            <p>Performance Marketing | SEM | E-Commerce | Data Analytics</p>
+            <p>&copy; 2024 Nirzar Bhaidkar. All rights reserved.</p>
         </div>
     </footer>
 </body>
